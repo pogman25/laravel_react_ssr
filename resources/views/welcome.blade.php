@@ -22,8 +22,7 @@
         </div>
 
         <script>
-        window.store = {!! json_encode($data) !!};
-        
+            window.__INITIAL_STORE__ = {!! json_encode($data) !!};
         </script>
 
         <script type="text/javascript" src="js/App.js"></script>

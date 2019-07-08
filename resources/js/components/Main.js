@@ -23,7 +23,7 @@ export default class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            dataList: window.store,
+            dataList: this.props.dataList,
             counter: 0,
             loading: false
         };
@@ -38,6 +38,7 @@ export default class Main extends Component {
                 loading: !this.state.loading
             });
         }, 2000);
+        delete window.__INITIAL_STORE__;
     }
 
     handleClick() {
